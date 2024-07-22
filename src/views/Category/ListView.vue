@@ -75,7 +75,7 @@ const handleOpenModal = () => {
 </script>
 
 <template>
-    <Card class="bg-white h-4/5 w-11/12 rounded-sm drop-shadow-sm">
+    <Card class="bg-white h-4/5 w-11/12 rounded-sm drop-shadow-sm overflow-y-auto">
         <CardHeader class="flex flex-row align-center items-center justify-between px-4 py-4">
             <CardTitle class="text-lg">
                 Listagem de categorias
