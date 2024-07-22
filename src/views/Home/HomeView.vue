@@ -92,7 +92,7 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-    <Card class="bg-white h-4/5 w-12/13 rounded-sm drop-shadow-sm">
+    <Card class="bg-white h-4/5 w-11/12 rounded-sm drop-shadow-sm">
         <CardHeader class="flex flex-row align-center items-center justify-between px-4 py-4">
             <div class="flex gap-6 w-2/3 items-center">
                 <CardTitle class="text-lg px-2">Produtos</CardTitle>
