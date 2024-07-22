@@ -21,7 +21,8 @@ defineProps({
         <p class="font-bold">{{ category }}</p>
 
     </span>
-    <div v-if="list && list.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div v-if="list && list.length > 0"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 p-2">
         <slot></slot>
     </div>
     <div v-else class="flex justify-center items-center w-full py-5 h-full">
