@@ -3,7 +3,7 @@ import { useUserStore } from '../store';
 
 const routes: RouteRecordRaw[] = [
     {
-        path: '/login',
+        path: '/',
         name: 'login',
         component: () => import('../views/Login/LoginView.vue'),
     },
@@ -45,7 +45,7 @@ router.beforeEach((to, _from, next) => {
     const store = useUserStore();
 
     if (to.meta.requiresAuth && !store.getToken) {
-        next('/login');
+        next('/');
     } else {
         next();
     }

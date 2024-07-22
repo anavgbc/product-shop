@@ -18,7 +18,7 @@ export const useUserStore = defineStore('user', {
         logout() {
             this.user = null;
             localStorage.clear();
-            router.push('/login');
+            router.push({ name: 'login' });
         },
     },
     getters: {
