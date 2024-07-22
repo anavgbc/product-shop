@@ -4,7 +4,6 @@ import Separator from '../../components/ui/separator/Separator.vue';
 import LoginCard from './components/LoginCard.vue';
 
 import { MessageCircle, Phone } from 'lucide-vue-next';
-import { Search } from 'lucide-vue-next';
 import { Mail } from 'lucide-vue-next';
 import { toast } from 'vue-sonner';
 
@@ -15,6 +14,7 @@ import { AuthService } from '../../services/AuthService';
 import AuthenticateInputDto from '../../services/dtos/Auth/input/authenticate.dto';
 import { useUserStore } from '../../store';
 import MyInputField from '../../components/MyInputField.vue';
+import { formSchema } from './schema';
 
 const authService = new AuthService();
 const userStore = useUserStore();
@@ -39,19 +39,14 @@ const onSubmit = (async (values: GenericObject) => {
 <template>
     <main class="w-full h-screen flex">
         <LoginCard />
-        <Form @submit="onSubmit" class="w-1/3 space-y-6 flex justify-center flex-col items-center">
+        <Form @submit="onSubmit" :validationSchema="formSchema"
+            class="w-1/3 space-y-6 flex justify-center flex-col items-center">
             <div class="w-4/5 flex flex-col gap-3">
                 <div class="relative w-full max-w-sm items-center justify-center">
-                    <MyInputField hasIcon placeholder="example@example.com" name="email" id="email" type="text" />
-                    <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
-                        <Mail class="size-3 text-muted-foreground" />
-                    </span>
+                    <MyInputField placeholder="example@example.com" name="email" id="email" type="text" />
                 </div>
                 <div class="relative w-full max-w-sm items-center">
-                    <MyInputField hasIcon id="senha" type="password" placeholder="Sua senha aqui" name="senha" />
-                    <span class=" absolute start-0 inset-y-0 flex items-center justify-center px-2">
-                        <Search class="size-3 text-muted-foreground" />
-                    </span>
+                    <MyInputField id="senha" type="password" placeholder="Sua senha aqui" name="senha" />
                 </div>
                 <Button class="bg-indigo-700 hover:bg-indigo-800 w-full text-white" variant="secondary" type="submit"
                     size="sm">Entre</Button>
