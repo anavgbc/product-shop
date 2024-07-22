@@ -28,8 +28,12 @@ export const useUserStore = defineStore('user', {
         getName(state) {
             return state.user?.nome;
         },
-        getUser(state) {
-            return state.user;
+        getUser() {
+            const user = localStorage.getItem('@user');
+            if (user) {
+                const { value } = JSON.parse(user);
+                return value;
+            }
         },
         getToken() {
             const isStored = localStorage.getItem('@user');
