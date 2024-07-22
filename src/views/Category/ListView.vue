@@ -9,9 +9,13 @@ import { CategoriesService } from '../../services/CategoryService';
 import Category from '../../services/entities/Category';
 import DeleteCategoryInputDto from '../../services/dtos/Category/input/delete-category.dto';
 import { toast } from 'vue-sonner';
+import { GenericObject } from 'vee-validate';
+import CreateCategoryInputDto from '../../services/dtos/Category/input/create-category.dto';
+import { genereateId } from '../../utils/Product';
 
 const categories = ref<Category[] | null>(null);
 const isLoading = ref<boolean>(false);
+const isOpenModal = ref<boolean>(false);
 
 const categoriesService = new CategoriesService();
 
@@ -39,6 +43,35 @@ const handleDeleteCategory = async (categoryId: string) => {
     });
 }
 
+const handleCreateCategory = async (body: GenericObject) => {
+    const existingCategory = categories.value?.find(category =>
+        category.nome.toLowerCase() === body.nome.toLowerCase()
+    );
+
+    if (existingCategory) {
+        toast.error(`Categoria "${existingCategory.nome}" já cadastrada`);
+        return;
+    }
+
+    const payload = new CreateCategoryInputDto({
+        nome: body.nome,
+        id: genereateId()
+    });
+
+    await categoriesService.createCategory(payload).then((response) => {
+        toast.success(`Categoria ${response.nome} cadastrada com sucesso!`);
+        loadCategories();
+        handleOpenModal()
+
+    }).catch(() => {
+        toast.error('Erro ao cadastrar categoria');
+    });
+}
+
+const handleOpenModal = () => {
+    isOpenModal.value = !isOpenModal.value;
+};
+
 </script>
 
 <template>
@@ -47,7 +80,7 @@ const handleDeleteCategory = async (categoryId: string) => {
             <CardTitle class="text-lg">
                 Listagem de categorias
             </CardTitle>
-            <CategoryDialog @update:categories="loadCategories()" />
+            <CategoryDialog v-model:open="isOpenModal" @create:categories="(value) => handleCreateCategory(value)" />
         </CardHeader>
         <Separator class="w-full" />
         <CardContent class="flex w-full justify-center align-center items-center ">
