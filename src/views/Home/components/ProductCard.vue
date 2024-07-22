@@ -25,7 +25,7 @@ const handleFavorite = (productId: string) => {
 </script>
 
 <template>
-    <Card class="w-48 h-56 flex flex-col justify-center items-center rounded-sm drop-shadow-sm hover:shadow-md ">
+    <Card class="w-44 h-56 flex flex-col justify-center items-center rounded-sm drop-shadow-sm hover:shadow-md ">
         <CardHeader class="flex justify-end w-full flex-row p-0 py-3 px-2">
             <Button variant="ghost" class="p-2 rounded-full w-8 h-8 p-0"
                 @click="router.push(`/edit/product/${product.id}`)">
