@@ -28,6 +28,7 @@ const categoryService = new CategoriesService();
 const route = useRoute();
 
 const product = ref<Product | null>(null);
+const products = ref<Product[]>([]);
 const categories = ref<Category[]>([]);
 
 const productId = route.params.id.toString();
@@ -44,6 +45,10 @@ const loadProduct = async (productId: string) => {
         toast.error('Erro ao carregar produto');
         router.push({ name: 'home' });
     }
+};
+
+const loadProducts = async () => {
+    products.value = await productService.getProducts();
 };
 
 const handleDelete = async () => {
@@ -65,31 +70,32 @@ const handleCategorySelect = () => {
     }
 };
 
+const checkIfProductExists = (name: string, id: string) => {
+    const product = products.value.find(product => product.nome.toLowerCase() === name.toLowerCase());
+    return product && product.id !== id;
+};
 
-onMounted(async () => {
-    await loadCategories();
-    await loadProduct(productId);
+const onSubmit = async (body: GenericObject) => {
+    try {
+        typeof body.valor === 'string' && (body.valor = formatCurrencyToNumber(body.valor));
 
-    if (product.value?.categoria) {
-        handleCategorySelect()
-    };
-});
+        if (checkIfProductExists(body.nome, productId)) {
+            toast.error('Produto já cadastrado');
+            return;
+        }
 
-const onSubmit = (async (body: GenericObject) => {
-    const input = new EditProductInputDto({
-        id: productId,
-        product: body
-    })
+        const input = new EditProductInputDto({
+            id: productId,
+            product: body
+        });
 
-    typeof body.valor === 'string' && (body.valor = formatCurrencyToNumber(body.valor));
-
-    await productService.updateProduct(input).then(() => {
+        await productService.updateProduct(input);
         toast.success('Produto atualizado com sucesso');
         router.push({ name: 'home' });
-    }).catch(() => {
+    } catch (error) {
         toast.error('Erro ao atualizar produto');
-    });
-});
+    }
+};
 
 const initialValues = computed(() => {
     return {
@@ -97,6 +103,16 @@ const initialValues = computed(() => {
         valor: product.value?.valor,
         descricao: product.value?.descricao,
         categoria: (product.value?.categoria)?.toString(),
+    };
+});
+
+onMounted(async () => {
+    await loadCategories();
+    await loadProduct(productId);
+    await loadProducts();
+
+    if (product.value?.categoria) {
+        handleCategorySelect()
     };
 });
 </script>
