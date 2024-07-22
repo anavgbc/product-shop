@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "nome": "SmartTv",
+      "valor": 4800,
+      "categoria": "275157",
+      "descricao": "SmartTv com diversas funções. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec eros ultricies tincidunt"
+    },
+    {
+      "id": "355439",
+      "nome": "Mesa",
+      "valor": 1.22,
+      "categoria": "105278",
+      "descricao": "Produto Mesa com diversas funções. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec eros ultricies tincidunt"
+    }
+  ],
+  "categories": [
+    {
+      "id": "275157",
+      "nome": "Casa"
+    },
+    {
+      "id": "105278",
+      "nome": "Banho"
+    },
+    {
+      "id": "130951",
+      "nome": "Eletrônicos"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "nome": "João",
+      "email": "email@email.com",
+      "senha": "1234"
+    }
+  ]
+}
