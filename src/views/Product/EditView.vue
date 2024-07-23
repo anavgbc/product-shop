@@ -60,16 +60,6 @@ const handleDelete = async () => {
     });
 };
 
-const handleCategorySelect = () => {
-    const existsCategory = categories.value.find(category => category.id === product.value?.categoria);
-
-    if (!existsCategory) {
-        initialValues.value.categoria = categories.value[0].id;
-    } else {
-        initialValues.value.categoria = product.value?.categoria.toString();
-    }
-};
-
 const checkIfProductExists = (name: string, id: string) => {
     const product = products.value.find(product => product.nome.toLowerCase() === name.toLowerCase());
     return product && product.id !== id;
@@ -97,23 +87,25 @@ const onSubmit = async (body: GenericObject) => {
     }
 };
 
+const getValidCategory = () => {
+    const categoryExists = categories.value.find(category => category.id === product.value?.categoria);
+    return categoryExists ? product.value?.categoria : categories.value[0].id;
+};
+
 const initialValues = computed(() => {
     return {
         nome: product.value?.nome,
         valor: product.value?.valor,
         descricao: product.value?.descricao,
-        categoria: (product.value?.categoria)?.toString(),
+        categoria: getValidCategory(),
     };
 });
+
 
 onMounted(async () => {
     await loadCategories();
     await loadProduct(productId);
     await loadProducts();
-
-    if (product.value?.categoria) {
-        handleCategorySelect()
-    };
 });
 </script>
 
