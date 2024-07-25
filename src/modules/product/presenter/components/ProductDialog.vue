@@ -9,7 +9,7 @@ import {
     DialogTrigger,
 } from '../../../../components/ui/dialog';
 import Button from '../../../../components/ui/button/Button.vue';
-import { onMounted, PropType } from 'vue';
+import { onMounted } from 'vue';
 import { ref } from 'vue';
 import Badge from '../../../../components/ui/badge/Badge.vue';
 import { Coins } from 'lucide-vue-next';
@@ -18,12 +18,11 @@ import Category from '../../../../modules/categories/domain/entities/category';
 import { findCategoryById } from '../../../../shared/utils';
 import store from '../../store';
 
-defineProps({
-    product: {
-        type: Object as PropType<Product>,
-        required: true,
-    },
-});
+export interface Props {
+    product: Product;
+}
+
+defineProps<Props>();
 
 const categories = ref<Category[]>([]);
 

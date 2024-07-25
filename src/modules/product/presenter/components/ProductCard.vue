@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
 import Card from '../../../../components/ui/card/Card.vue';
 import CardContent from '../../../../components/ui/card/CardContent.vue';
 import CardTitle from '../../../../components/ui/card/CardTitle.vue';
@@ -10,12 +9,11 @@ import ProductDialog from './ProductDialog.vue';
 import Product from '../../domain/entities/product';
 import router from '../../../../registerModules/router';
 
-defineProps({
-    product: {
-        type: Object as PropType<Product>,
-        required: true,
-    },
-});
+export interface Props {
+    product: Product;
+}
+
+defineProps<Props>();
 
 const emit = defineEmits(['favorited']);
 

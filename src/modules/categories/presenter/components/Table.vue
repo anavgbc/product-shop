@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import { PropType } from 'vue';
 import Button from '../../../../components/ui/button/Button.vue';
 import {
     Table,
@@ -15,12 +14,11 @@ import { EllipsisVertical, Trash } from 'lucide-vue-next';
 import EditCategoryDialog from './EditCategoryDialog.vue';
 import Category from '../../domain/entities/category';
 
-defineProps({
-    categories: {
-        type: Object as PropType<Category[]>,
-        required: true,
-    },
-});
+export interface Props {
+    categories: Category[];
+}
+
+defineProps<Props>();
 
 const emit = defineEmits(['delete', 'updateList']);
 

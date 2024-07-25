@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
 import Product from '../../domain/entities/product';
 
-defineProps({
-    category: {
-        type: String,
-        required: true,
-    },
-    list: {
-        type: Object as PropType<Product[] | null>,
-        required: true,
-    },
-});
+export interface Props {
+    category: string;
+    list: Product[];
+}
 
+defineProps<Props>();
 </script>
 
 <template>

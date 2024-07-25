@@ -7,19 +7,14 @@ import {
     DropdownMenuTrigger,
 } from '../../../../components/ui/dropdown-menu';
 import Button from '../../../../components/ui/button/Button.vue';
-import { PropType } from 'vue';
 import Category from '../../../../modules/categories/domain/entities/category';
 
-defineProps({
-    categories: {
-        type: Object as PropType<Category[]>,
-        required: true,
-    },
-    title: {
-        type: String,
-        required: true,
-    },
-});
+export interface Props {
+    categories: Category[];
+    title: string
+};
+
+defineProps<Props>();
 
 const emit = defineEmits(['change']);
 

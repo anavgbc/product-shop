@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
-import { PropType } from 'vue';
 import {
     Dialog,
     DialogContent,
@@ -19,16 +18,12 @@ import { formSchema } from '../utils/schema/edit.ts';
 import MyInputField from '../../../../shared/components/MyInputField.vue';
 import { updateCategory } from '../../domain/controllers';
 
-const props = defineProps({
-    category: {
-        type: Object as PropType<Category>,
-        required: true,
-    },
-    categories: {
-        type: Object as PropType<Category[]>,
-        required: true,
-    },
-});
+export interface Props {
+    category: Category;
+    categories: Category[];
+}
+
+const props = defineProps<Props>();
 
 const emit = defineEmits(['update:categories']);
 
