@@ -1,10 +1,10 @@
-import Product from '@/shared/types/product';
-import GetProductInputDto from '@/shared/dto/product/input/retrieve-product.dto';
-import CreateProductInputDto from '@/shared/dto/product/input/create-product.dto';
-import EditProductInputDto from '@/shared/dto/product/input/edit-product.dto';
-import DeleteProductInputDto from '@/shared/dto/product/input/delete-product.dto';
-import ApiService from '@/shared/client/api';
-import Contract from '@/shared/contracts/product';
+import Product from '../../../shared/types/product';
+import GetProductInputDto from '../../../shared/dto/product/input/retrieve-product.dto';
+import CreateProductInputDto from '../../../shared/dto/product/input/create-product.dto';
+import EditProductInputDto from '../../../shared/dto/product/input/edit-product.dto';
+import DeleteProductInputDto from '../../../shared/dto/product/input/delete-product.dto';
+import ApiService from '../../../shared/client/api';
+import Contract from '../../../shared/contracts/product';
 
 export class ProductService extends ApiService implements Contract {
     constructor() {

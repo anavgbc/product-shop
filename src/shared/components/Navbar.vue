@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Card } from '../../components/ui/card';
 import { LogOut, Menu } from 'lucide-vue-next';
 import { useUserStore } from '../stores/user';
 

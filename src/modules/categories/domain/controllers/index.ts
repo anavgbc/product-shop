@@ -1,17 +1,17 @@
-import GetCategoryInputDto from '@/shared/dto/category/input/retrieve-category.dto';
+import GetCategoryInputDto from '../../../../shared/dto/category/input/retrieve-category.dto';
 import Category from '../../../../shared/types/category';
 import Entity from '../entities/category';
-import CreateCategoryInputDto from '@/shared/dto/category/input/create-category.dto';
-import EditCategoryInputDto from '@/shared/dto/category/input/edit-category.dto';
-import useService from '@/hooks/use-service';
-import { CategoriesService as CategoryContract } from '@/shared/contracts/category';
+import CreateCategoryInputDto from '../../../../shared/dto/category/input/create-category.dto';
+import EditCategoryInputDto from '../../../../shared/dto/category/input/edit-category.dto';
+import useService from '../../../../hooks/use-service';
+import { CategoriesService as CategoryContract } from '../../../../shared/contracts/category';
 import { toast } from 'vue-sonner';
-import { CreateCategoryRequest } from '@/shared/types/category/request/craete-category';
-import { genereateId } from '@/shared/utils';
-import { getCategorytByIdRequest } from '@/shared/types/category/request/get-category';
-import { UpdateCategoryByIdRequest } from '@/shared/types/category/request/update-category';
-import { DeleteCategoryRequest } from '@/shared/types/category/request/delete-category';
-import DeleteCategoryInputDto from '@/shared/dto/category/input/delete-category.dto';
+import { CreateCategoryRequest } from '../../../../shared/types/category/request/craete-category';
+import { genereateId } from '../../../../shared/utils';
+import { getCategorytByIdRequest } from '../../../../shared/types/category/request/get-category';
+import { UpdateCategoryByIdRequest } from '../../../../shared/types/category/request/update-category';
+import { DeleteCategoryRequest } from '../../../../shared/types/category/request/delete-category';
+import DeleteCategoryInputDto from '../../../../shared/dto/category/input/delete-category.dto';
 
 const categoryService = useService(CategoryContract);
 

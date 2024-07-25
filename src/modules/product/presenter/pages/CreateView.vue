@@ -6,15 +6,15 @@ import { Form, GenericObject } from 'vee-validate';
 import { Button } from '../../../../components/ui/button';
 import Separator from '../../../../components/ui/separator/Separator.vue';
 import Product from '../../domain/entities/product';
-import Category from '@/modules/categories/domain/entities/category';
-import { useProductStore } from '@/shared/stores/product';
+import Category from '../../../../modules/categories/domain/entities/category';
 import { getProducts, createProduct } from '../../domain/controllers';
-import { listCategories } from '@/modules/categories/domain/controllers';
-import MyInputField from '@/shared/components/MyInputField.vue';
-import MySelectField from '@/shared/components/MySelectField.vue';
-import MyTextarea from '@/shared/components/MyTextarea.vue';
+import { listCategories } from '../../../../modules/categories/domain/controllers';
+import MyInputField from '../../../../shared/components/MyInputField.vue';
+import MySelectField from '../../../../shared/components/MySelectField.vue';
+import MyTextarea from '../../../../shared/components/MyTextarea.vue';
+import store from '../../store';
 
-const productStore = useProductStore();
+const productStore = store();
 const categories = ref<Category[]>([]);
 const products = ref<Product[]>([]);
 

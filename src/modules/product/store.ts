@@ -1,5 +1,5 @@
-import Category from '@/modules/categories/domain/entities/category';
-import Product from '@/modules/product/domain/entities/product';
+import Category from '../../modules/categories/domain/entities/category';
+import Product from './domain/entities/product';
 import { defineStore } from 'pinia';
 
 interface State {
@@ -8,7 +8,7 @@ interface State {
     favorites: Product[];
 }
 
-export const useProductStore = defineStore('product', {
+export default defineStore('product', {
     state: (): State => ({
         categories: [],
         products: [],

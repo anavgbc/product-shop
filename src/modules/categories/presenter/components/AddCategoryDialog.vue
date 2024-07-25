@@ -11,7 +11,7 @@ import {
 import Button from '../../../../components/ui/button/Button.vue';
 import { Form, GenericObject } from 'vee-validate';
 import { formSchema } from '../utils/schema/create';
-import MyInputField from '@/shared/components/MyInputField.vue';
+import MyInputField from '../../../../shared/components/MyInputField.vue';
 
 const emit = defineEmits(['create:categories']);
 

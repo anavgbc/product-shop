@@ -1,10 +1,10 @@
-import Category from '@/shared/types/category';
-import GetCategoryInputDto from '@/shared/dto/category/input/retrieve-category.dto';
-import CreateCategoryInputDto from '@/shared/dto/category/input/create-category.dto';
-import EditCategoryInputDto from '@/shared/dto/category/input/edit-category.dto';
-import DeleteCategoryInputDto from '@/shared/dto/category/input/delete-category.dto';
-import ApiService from '@/shared/client/api';
-import Contract from '@/shared/contracts/category';
+import Category from '../../../shared/types/category';
+import GetCategoryInputDto from '../../../shared/dto/category/input/retrieve-category.dto';
+import CreateCategoryInputDto from '../../../shared/dto/category/input/create-category.dto';
+import EditCategoryInputDto from '../../../shared/dto/category/input/edit-category.dto';
+import DeleteCategoryInputDto from '../../../shared/dto/category/input/delete-category.dto';
+import ApiService from '../../../shared/client/api';
+import Contract from '../../../shared/contracts/category';
 
 export class CategoriesService extends ApiService implements Contract {
     constructor() {

@@ -1,4 +1,4 @@
-import Category from '@/modules/categories/domain/entities/category';
+import Category from '../../modules/categories/domain/entities/category';
 
 export const genereateId = (): string => {
     return (Math.floor(Math.random() * 1000000) + 1).toString();

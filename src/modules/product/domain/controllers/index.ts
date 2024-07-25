@@ -1,18 +1,18 @@
-import Product from '@/shared/types/product';
+import Product from '../../../../shared/types/product';
 import Entity from '../entities/product';
-import CreateProductInputDto from '@/shared/dto/product/input/create-product.dto';
-import EditProductInputDto from '@/shared/dto/product/input/edit-product.dto';
-import DeleteProductInputDto from '@/shared/dto/product/input/delete-product.dto';
-import GetProductInputDto from '@/shared/dto/product/input/retrieve-product.dto';
-import useService from '@/hooks/use-service';
-import { ProductService as ProductContract } from '@/shared/contracts/product';
+import CreateProductInputDto from '../../../../shared/dto/product/input/create-product.dto';
+import EditProductInputDto from '../../../../shared/dto/product/input/edit-product.dto';
+import DeleteProductInputDto from '../../../../shared/dto/product/input/delete-product.dto';
+import GetProductInputDto from '../../../../shared/dto/product/input/retrieve-product.dto';
+import useService from '../../../../hooks/use-service';
+import { ProductService as ProductContract } from '../../../../shared/contracts/product';
 import { toast } from 'vue-sonner';
-import { CreateProductRequest } from '@/shared/types/product/requests/create-product';
-import { UpdateProductByIdRequest } from '@/shared/types/product/requests/update-product';
-import { DeleteProductRequest } from '@/shared/types/product/requests/delete-product';
-import { getProductByIdRequest } from '@/shared/types/product/requests/get-product';
-import { formatCurrencyToNumber, genereateId } from '@/shared/utils';
-import router from '@/registerModules/router';
+import { CreateProductRequest } from '../../../../shared/types/product/requests/create-product';
+import { UpdateProductByIdRequest } from '../../../../shared/types/product/requests/update-product';
+import { DeleteProductRequest } from '../../../../shared/types/product/requests/delete-product';
+import { getProductByIdRequest } from '../../../../shared/types/product/requests/get-product';
+import { formatCurrencyToNumber, genereateId } from '../../../../shared/utils';
+import router from '../../../../registerModules/router';
 
 const productService = useService(ProductContract);
 

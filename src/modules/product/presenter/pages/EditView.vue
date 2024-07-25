@@ -8,14 +8,14 @@ import Button from '../../../../components/ui/button/Button.vue';
 import { formSchema } from '../utils/schema/edit';
 import { Form, GenericObject, } from 'vee-validate';
 import Product from '../../domain/entities/product';
-import Category from '@/modules/categories/domain/entities/category';
+import Category from '../../../../modules/categories/domain/entities/category';
 import { deleteProduct, getProduct, getProducts, updateProduct } from '../../domain/controllers';
-import { formatCurrencyToNumber } from '@/shared/utils';
-import { listCategories } from '@/modules/categories/domain/controllers';
-import MyInputField from '@/shared/components/MyInputField.vue';
-import MySelectField from '@/shared/components/MySelectField.vue';
-import MyTextarea from '@/shared/components/MyTextarea.vue';
-import { UpdateProductByIdRequest } from '@/shared/types/product/requests/update-product';
+import { formatCurrencyToNumber } from '../../../../shared/utils';
+import { listCategories } from '../../../../modules/categories/domain/controllers';
+import MyInputField from '../../../../shared/components/MyInputField.vue';
+import MySelectField from '../../../../shared/components/MySelectField.vue';
+import MyTextarea from '../../../../shared/components/MyTextarea.vue';
+import { UpdateProductByIdRequest } from '../../../../shared/types/product/requests/update-product';
 
 const route = useRoute();
 

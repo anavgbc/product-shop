@@ -1,4 +1,4 @@
-import User from '@/shared/types/user';
+import User from '../../../shared/types/user';
 
 export default interface AuthService {
     getUsers(): Promise<User[]>;

@@ -11,7 +11,7 @@ import { Form, GenericObject } from 'vee-validate';
 import MyInputField from '../../../../shared/components/MyInputField.vue';
 import { formSchema } from '../utils/schema';
 import { authenticate } from '../../domain/controllers';
-import { AuthenticateRequest } from '@/shared/types/user/requests';
+import { AuthenticateRequest } from '../../../../shared/types/user/requests';
 
 const onSubmit = (async (values: GenericObject) => {
     const input: AuthenticateRequest = {

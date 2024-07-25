@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 
-import Card from '../../../../components/ui/card/Card.vue';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../../components/ui/card';
 import Input from '../../../../components/ui/input/Input.vue';
-import CardContent from '../../../../components/ui/card/CardContent.vue';
-import CardHeader from '../../../../components/ui/card/CardHeader.vue';
 import Separator from '../../../../components/ui/separator/Separator.vue';
-import CardTitle from '../../../../components/ui/card/CardTitle.vue';
 import { Button } from '../../../../components/ui/button';
 
 import Menu from '../components/Menu.vue';
@@ -16,11 +13,11 @@ import ProductList from '../components/ProductList.vue';
 import { Search } from 'lucide-vue-next';
 
 import Product from '../../domain/entities/product';
-import router from '@/registerModules/router';
-import { useProductStore } from '@/shared/stores/product';
+import router from '../../../../registerModules/router';
 import { getProducts } from '../../domain/controllers';
-import Category from '@/modules/categories/domain/entities/category';
-import { listCategories } from '@/modules/categories/domain/controllers';
+import Category from '../../../../modules/categories/domain/entities/category';
+import { listCategories } from '../../../../modules/categories/domain/controllers';
+import store from '../../store';
 
 const categories = ref<Category[]>([]);
 const products = ref<Product[]>([]);
@@ -28,7 +25,7 @@ const searchValue = ref<string>('');
 const filteredList = ref<Product[] | null>(null);
 const categorySelected = ref<string>('');
 
-const productStore = useProductStore();
+const productStore = store();
 
 const clearFilters = () => {
     searchValue.value = '';

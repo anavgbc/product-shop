@@ -8,7 +8,7 @@ import { Button } from '../../../../components/ui/button';
 import { Heart, Pencil } from 'lucide-vue-next';
 import ProductDialog from './ProductDialog.vue';
 import Product from '../../domain/entities/product';
-import router from '@/registerModules/router';
+import router from '../../../../registerModules/router';
 
 defineProps({
     product: {

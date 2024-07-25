@@ -14,9 +14,9 @@ import { ref } from 'vue';
 import Badge from '../../../../components/ui/badge/Badge.vue';
 import { Coins } from 'lucide-vue-next';
 import Product from '../../domain/entities/product';
-import Category from '@/modules/categories/domain/entities/category';
-import { findCategoryById } from '@/shared/utils';
-import { useProductStore } from '@/shared/stores/product';
+import Category from '../../../../modules/categories/domain/entities/category';
+import { findCategoryById } from '../../../../shared/utils';
+import store from '../../store';
 
 defineProps({
     product: {
@@ -28,7 +28,7 @@ defineProps({
 const categories = ref<Category[]>([]);
 
 onMounted(() => {
-    const productStore = useProductStore();
+    const productStore = store();
     categories.value = productStore.getCategories;
 });
 

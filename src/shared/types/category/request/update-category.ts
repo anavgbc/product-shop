@@ -1,4 +1,4 @@
-import Category from '@/shared/types/category';
+import Category from '../../../../shared/types/category';
 
 interface CategoryStructure {
     nome: string;

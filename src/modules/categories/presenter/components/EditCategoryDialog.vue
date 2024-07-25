@@ -16,7 +16,7 @@ import { Form, GenericObject } from 'vee-validate';
 import { Pencil } from 'lucide-vue-next';
 import Category from '../../domain/entities/category';
 import { formSchema } from '../utils/schema/edit.ts';
-import MyInputField from '@/shared/components/MyInputField.vue';
+import MyInputField from '../../../../shared/components/MyInputField.vue';
 import { updateCategory } from '../../domain/controllers';
 
 const props = defineProps({

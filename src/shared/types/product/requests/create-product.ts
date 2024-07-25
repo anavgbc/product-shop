@@ -1,4 +1,4 @@
-import Product from '@/shared/types/product/index';
+import Product from '../../../../shared/types/product/index';
 
 interface ProductStructure {
     nome: string;

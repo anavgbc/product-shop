@@ -1,5 +1,5 @@
-import User from '@/modules/auth/domain/entities/user';
-import router from '@/registerModules/router';
+import User from '../../../modules/auth/domain/entities/user';
+import router from '../../../registerModules/router';
 import { defineStore } from 'pinia';
 
 interface State {

@@ -8,7 +8,7 @@ import {
 } from '../../../../components/ui/dropdown-menu';
 import Button from '../../../../components/ui/button/Button.vue';
 import { PropType } from 'vue';
-import Category from '@/modules/categories/domain/entities/category';
+import Category from '../../../../modules/categories/domain/entities/category';
 
 defineProps({
     categories: {

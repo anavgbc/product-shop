@@ -8,7 +8,7 @@ import { createCategory, deleteCategory, listCategories } from '../../domain/con
 import Category from '../../domain/entities/category';
 import Table from '../components/Table.vue';
 import AddCategoryDialog from '../components/AddCategoryDialog.vue';
-import { DeleteCategoryRequest } from '@/shared/types/category/request/delete-category';
+import { DeleteCategoryRequest } from '../../../../shared/types/category/request/delete-category';
 
 const categories = ref<Category[] | null>(null);
 const isLoading = ref<boolean>(false);

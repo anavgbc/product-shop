@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import Category from '@/modules/categories/domain/entities/category';
+import { Label } from '../../components/ui/label';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import Category from '../../modules/categories/domain/entities/category';
 import { ErrorMessage, useField } from 'vee-validate';
 
 export interface Props {
