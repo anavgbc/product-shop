@@ -7,8 +7,8 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from '../../../../components/ui/dialog';
-import Button from '../../../../components/ui/button/Button.vue';
+} from '../../../../shared/components/ui/dialog';
+import Button from '../../../../shared/components/ui/button/Button.vue';
 import { Form, GenericObject } from 'vee-validate';
 import { formSchema } from '../utils/schema/create';
 import MyInputField from '../../../../shared/components/MyInputField.vue';

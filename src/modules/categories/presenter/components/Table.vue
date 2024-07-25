@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Button from '../../../../components/ui/button/Button.vue';
+import Button from '../../../../shared/components/ui/button/Button.vue';
 import {
     Table,
     TableBody,
@@ -8,7 +8,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from '../../../../components/ui/table'
+} from '../../../../shared/components/ui/table'
 import { EllipsisVertical, Trash } from 'lucide-vue-next';
 
 import EditCategoryDialog from './EditCategoryDialog.vue';

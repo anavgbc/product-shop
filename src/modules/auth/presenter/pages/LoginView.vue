@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Button from '../../../../components/ui/button/Button.vue';
-import Separator from '../../../../components/ui/separator/Separator.vue';
+import Button from '../../../../shared/components/ui/button/Button.vue';
+import Separator from '../../../../shared/components/ui/separator/Separator.vue';
 import LoginCard from '../components/LoginCard.vue';
 
 import { MessageCircle, Phone } from 'lucide-vue-next';

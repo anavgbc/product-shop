@@ -5,8 +5,8 @@ import {
     DropdownMenuRadioGroup,
     DropdownMenuRadioItem,
     DropdownMenuTrigger,
-} from '../../../../components/ui/dropdown-menu';
-import Button from '../../../../components/ui/button/Button.vue';
+} from '../../../../shared/components/ui/dropdown-menu';
+import Button from '../../../../shared/components/ui/button/Button.vue';
 import Category from '../../../../modules/categories/domain/entities/category';
 
 export interface Props {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from 'vue';
-import { Card, CardContent, CardHeader, CardTitle } from '../../../../components/ui/card';
-import Separator from '../../../../components/ui/separator/Separator.vue';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../../shared/components/ui/card';
+import Separator from '../../../../shared/components/ui/separator/Separator.vue';
 
 import { GenericObject } from 'vee-validate';
 import { createCategory, deleteCategory, listCategories } from '../../domain/controllers';

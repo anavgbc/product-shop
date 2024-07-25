@@ -4,8 +4,8 @@ import { Book, Heart, Home } from 'lucide-vue-next';
 import { onMounted, ref } from 'vue';
 import User from '../../modules/auth/domain/entities/user';
 import { routerNavigation } from '../../shared/constants/string';
-import { Avatar, AvatarImage } from '../../components/ui/avatar';
-import { Card } from '../../components/ui/card';
+import { Avatar, AvatarImage } from './ui/avatar';
+import { Card } from './ui/card';
 import router from '../../registerModules/router';
 import { useUserStore } from '../stores/user';
 

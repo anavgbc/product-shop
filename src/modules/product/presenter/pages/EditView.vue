@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../../../components/ui/card';
-import Separator from '../../../../components/ui/separator/Separator.vue';
-import Button from '../../../../components/ui/button/Button.vue';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../../../shared/components/ui/card';
+import Separator from '../../../../shared/components/ui/separator/Separator.vue';
+import Button from '../../../../shared/components/ui/button/Button.vue';
 
 import { formSchema } from '../utils/schema/edit';
 import { Form, GenericObject, } from 'vee-validate';

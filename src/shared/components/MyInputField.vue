@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useField, ErrorMessage } from 'vee-validate';
-import { Input } from '../../components/ui/input';
-import { Label } from '../../components/ui/label';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
 
 export interface Props {
   label?: string;

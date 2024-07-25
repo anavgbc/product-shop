@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../../../components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../../../shared/components/ui/card';
 import { formSchema } from '../utils/schema/create';
 import { Form, GenericObject } from 'vee-validate';
-import { Button } from '../../../../components/ui/button';
-import Separator from '../../../../components/ui/separator/Separator.vue';
+import { Button } from '../../../../shared/components/ui/button';
+import Separator from '../../../../shared/components/ui/separator/Separator.vue';
 import Product from '../../domain/entities/product';
 import Category from '../../../../modules/categories/domain/entities/category';
 import { getProducts, createProduct } from '../../domain/controllers';

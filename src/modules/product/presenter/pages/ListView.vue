@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 
-import { Card, CardContent, CardHeader, CardTitle } from '../../../../components/ui/card';
-import Input from '../../../../components/ui/input/Input.vue';
-import Separator from '../../../../components/ui/separator/Separator.vue';
-import { Button } from '../../../../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../../shared/components/ui/card';
+import Input from '../../../../shared/components/ui/input/Input.vue';
+import Separator from '../../../../shared/components/ui/separator/Separator.vue';
+import { Button } from '../../../../shared/components/ui/button';
 
 import Menu from '../components/Menu.vue';
 import ProductCard from '../components/ProductCard.vue';

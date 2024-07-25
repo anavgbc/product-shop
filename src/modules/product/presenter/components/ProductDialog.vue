@@ -7,11 +7,11 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from '../../../../components/ui/dialog';
-import Button from '../../../../components/ui/button/Button.vue';
+} from '../../../../shared/components/ui/dialog';
+import Button from '../../../../shared/components/ui/button/Button.vue';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
-import Badge from '../../../../components/ui/badge/Badge.vue';
+import Badge from '../../../../shared/components/ui/badge/Badge.vue';
 import { Coins } from 'lucide-vue-next';
 import Product from '../../domain/entities/product';
 import Category from '../../../../modules/categories/domain/entities/category';

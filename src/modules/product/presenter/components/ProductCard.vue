@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Card from '../../../../components/ui/card/Card.vue';
-import CardContent from '../../../../components/ui/card/CardContent.vue';
-import CardTitle from '../../../../components/ui/card/CardTitle.vue';
-import CardHeader from '../../../../components/ui/card/CardHeader.vue';
-import { Button } from '../../../../components/ui/button';
+import Card from '../../../../shared/components/ui/card/Card.vue';
+import CardContent from '../../../../shared/components/ui/card/CardContent.vue';
+import CardTitle from '../../../../shared/components/ui/card/CardTitle.vue';
+import CardHeader from '../../../../shared/components/ui/card/CardHeader.vue';
+import { Button } from '../../../../shared/components/ui/button';
 import { Heart, Pencil } from 'lucide-vue-next';
 import ProductDialog from './ProductDialog.vue';
 import Product from '../../domain/entities/product';
